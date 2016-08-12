@@ -1,6 +1,21 @@
 //Your existing code should print out the message in the hello-world file
 
-angular.module("todoListApp", []);
+angular.module("todoListApp", [])
+.controller('mainCtrl', function($scope) {
+	$scope.helloWorld = function() {
+		console.log("Hello There");
+	};	
+
+	var todos = [];
+
+	$scope.addTask = function($scope) {
+		var todos = tasks.push(tasks.description, tasks.priority);
+	};	
+
+});
+
+
+
 
 //'use strict';
 
