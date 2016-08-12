@@ -1,18 +1,23 @@
-//Your existing code should print out the message in the hello-world file
-
 angular.module("todoListApp", [])
 .controller('mainCtrl', function($scope) {
 	$scope.helloWorld = function() {
 		console.log("Hello There");
 	};	
 
-	var todos = [];
+	$scope.todos = [];
 
-	$scope.addTask = function($scope) {
-		var todos = tasks.push(tasks.description, tasks.priority);
-	};	
+	$scope.addTask = function() {
+		$scope.todos.push({
+			description: $scope.tasks.description, 
+			priority: $scope.tasks.priority
+		});
+	};
 
 });
+
+//Change the color of the list items by injecting html
+//look into javascript and angular filters to get the other thing working. 
+//Javascript objects on 
 
 
 
